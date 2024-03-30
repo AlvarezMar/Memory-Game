@@ -1,0 +1,40 @@
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.home{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: center;
+    height: 45rem;
+    font-family: var(--main-font);
+    overflow: hidden;
+    gap: 1rem;
+}
+
+.home_menu{
+    color: white;
+    background-color: rgb(42, 33, 124);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+}
+
+.home_header{
+    background-color: rgb(252, 186, 1);
+    border-radius: .5rem;
+}
+
+.btn{
+    color: white;
+    font-family: var(--main-font);
+    font-size: 1rem;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: .3rem;
+    padding: .5rem;
+    cursor: pointer;
+}
