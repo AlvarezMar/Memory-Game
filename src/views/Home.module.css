@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: 1fr 3fr;
     justify-content: center;
-    height: 45rem;
+    height: 888px;
     font-family: var(--main-font);
     overflow: hidden;
     gap: 1rem;
@@ -15,17 +15,20 @@
 
 .home_menu{
     color: white;
-    background-color: rgb(42, 33, 124);
+    background-color: #1E1E1E;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: .5rem;
+    background-image: url(../../public/topo.webp);
 }
 
 .home_header{
-    background-color: rgb(252, 186, 1);
+    background-color: #1E1E1E;
     border-radius: .5rem;
+    background-image: url(../../public/topo.webp);
+    background-repeat: no-repeat;
 }
 
 .btn{
