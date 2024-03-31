@@ -1,0 +1,28 @@
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    width: 10.5rem;
+    height: 10.5rem;
+    padding: 1rem;
+    overflow: hidden;
+
+}
+
+.card img{
+    width: 200px;
+}
+
+.card p{
+    margin: 0;
+    letter-spacing: .2rem;
+}
+
+.front{
+    border-radius: .5rem;
+}
+
+.back{
+    width: 150px;
+}
