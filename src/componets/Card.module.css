@@ -2,16 +2,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: .5rem;
-    width: 10.5rem;
-    height: 10.5rem;
+    border-radius: .3rem;
+    max-width: 3rem;
+    max-height: 5rem;
     padding: 1rem;
     overflow: hidden;
-
 }
 
 .card img{
-    width: 200px;
+    width: 6rem;
 }
 
 .card p{
@@ -25,4 +24,22 @@
 
 .back{
     width: 150px;
+}
+
+@media (min-width: 480px){
+    .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: .5rem;
+        max-width: 10.5rem;
+        max-height: 10.5rem;
+        padding: 1rem;
+        overflow: hidden;
+    }
+
+    .card img{
+        width: 200px;
+    }
+
 }

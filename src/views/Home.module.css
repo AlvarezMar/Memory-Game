@@ -1,26 +1,39 @@
 .container{
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
+}
+.logo{
+    width: 200px;
 }
 
 .home{
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 888px;
     font-family: var(--main-font);
     overflow: hidden;
     background-color: #1E1E1E;
-    border-radius: .5rem;
     background-image: url(/topo.webp);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
+}
 
+@media (min-width: 480px) {
+    .home{
+        position: relative;
+        max-height: 888px;
+        border-radius: .5rem;
+    
         -webkit-box-shadow: 0px 0px 115px -15px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 115px -15px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 115px -15px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 115px -15px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 115px -15px rgba(0, 0, 0, 0.75);
+    }
+
+    .logo{
+        width: 150px;
+    }
 }
 
 .home_menu{
@@ -37,23 +50,21 @@
 }
 
 .socials{
-    position: absolute;
     display: flex;
+    position: absolute;
     gap: 1.5rem;
-    bottom: 2rem;
+    bottom: 3rem;
 }
 
 .socials img{
     cursor: pointer;
     transition: ease .3s;
-
+    
     &:hover{
         transform: scale(1.1);
         transition: ease .2s;
     }
-
 }
-
 
 .btn{
     color: white;

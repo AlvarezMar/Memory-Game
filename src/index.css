@@ -5,5 +5,9 @@
 html{
   height: 100%;
   background: linear-gradient(145deg, #1E1E1E 10%, #1E0530, #2E0854 50%, #6A0DAD);
+}
 
+body{
+  margin: 0;
+  height: 100%;
 }

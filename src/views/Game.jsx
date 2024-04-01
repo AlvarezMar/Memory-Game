@@ -8,7 +8,7 @@ function Game({turns, cardSelected, backToHome, shuffleCards, cards}){
     return <div className={`${styles.game} ${styles.container}`}>
         <div className={styles.game_menu}>
             <Link to='/'>
-                <img src="./logo.png" alt="Game Logo" width='150px'/>
+                <img className={styles.logo} src="./logo.png" alt="Game Logo"/>
             </Link>
             
             <div className={styles.buttons}>

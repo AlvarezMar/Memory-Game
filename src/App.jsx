@@ -3,7 +3,7 @@ import './App.css'
 import Home from './views/Home'
 import Game from './views/Game'
 import Footer from './componets/Footer'
-import {Routes, Route, redirect, Navigate} from 'react-router-dom';
+import {Routes, Route, Navigate} from 'react-router-dom';
 
 const cardImages = [
   {src: '/cards/biscuit.png', matched: false},
@@ -64,7 +64,7 @@ function App() {
     setTurns(0);
   }
 
-  return <div>
+  return <div className='app'>
     <Routes>
       <Route path='/' element={<Home setAuthorized={setAuthorized} shuffleCards={shuffleCards}/>}/>
       <Route path='/game' element={ authorized ? <Game turns={turns} cardSelected={cardSelected} shuffleCards={shuffleCards} cards={cards}/> : <Navigate to='/'/>}/>

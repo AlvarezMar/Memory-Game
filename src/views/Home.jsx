@@ -10,7 +10,7 @@ function Home({setAuthorized, shuffleCards }){
     return <div className={`${styles.home} ${styles.container}`}>
         <div className={styles.home_menu}>
             <Link to='/'>
-                <img src="./logo.png" alt="Game Logo" width='150px'/>
+                <img className={styles.logo} src="./logo.png" alt="Game Logo"/>
             </Link>
 
             <Link to='/game'>
