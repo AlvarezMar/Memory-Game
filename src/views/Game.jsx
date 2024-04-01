@@ -3,7 +3,7 @@ import Card from "../componets/Card";
 
 import { Link } from "react-router-dom";
 
-function Game({turns, cardSelected, backToHome, shuffleCards, cards}){
+function Game({turns, cardSelected, shuffleCards, cards, cardOne, cardTwo, disabled}){
 
     return <div className={`${styles.game} ${styles.container}`}>
         <div className={styles.game_menu}>
@@ -27,9 +27,8 @@ function Game({turns, cardSelected, backToHome, shuffleCards, cards}){
         </div>
         <div className={styles.game_board}>
             <div className={styles.card_container}>
-
                 {cards.map((card) => (
-                    <Card cardSelected={cardSelected} card={card} key={card.id}/>
+                    <Card cardSelected={cardSelected} card={card} key={card.id} flipped={card === cardOne || card === cardTwo || card.matched} disabled={disabled}/>
                 ))}
             </div>
 

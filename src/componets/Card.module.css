@@ -1,45 +1,33 @@
 .card{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: .3rem;
-    max-width: 3rem;
-    max-height: 5rem;
-    padding: 1rem;
+    position: relative;
+    border-radius: .5rem;
+    width: 12.5rem;
+    height: 12.5rem;
     overflow: hidden;
 }
 
 .card img{
-    width: 6rem;
+    width: 200px;
 }
-
-.card p{
-    margin: 0;
-    letter-spacing: .2rem;
-}
-
 .front{
-    border-radius: .5rem;
+    position: absolute;
+    transform: rotateY(90deg);
+    transform: matrix();
+    transition: all ease 0.2s;
+}
+
+.flipped .front{
+    transform: rotateY(0deg);
+    transition-delay: 0.15s;
 }
 
 .back{
-    width: 150px;
+    height: 300px;
+    transition: all ease 0.2s;
+    transition-delay: 0.15s;
 }
 
-@media (min-width: 480px){
-    .card{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: .5rem;
-        max-width: 10.5rem;
-        max-height: 10.5rem;
-        padding: 1rem;
-        overflow: hidden;
-    }
-
-    .card img{
-        width: 200px;
-    }
-
+.flipped .back{
+    transform: rotateY(-90deg);
+    transition-delay: 0s;
 }

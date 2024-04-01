@@ -18,6 +18,7 @@ const cardImages = [
 
 function App() {
   const [authorized, setAuthorized] = useState(false);
+  const [disabled, setDisabled] = useState(false);
 
   const [cards, setCards] = useState([]);
   const [turns, setTurns] = useState(0);
@@ -27,6 +28,7 @@ function App() {
 
   useEffect(() => {
     if (cardOne && cardTwo) {
+      setDisabled(true);
       if (cardOne.src === cardTwo.src) {
         setCards(prevCards => {
           return prevCards.map(card => {
@@ -38,22 +40,22 @@ function App() {
           })
         })
 
-        console.log('coinciden');
-        
+        newTurn();
       } else {
-        console.log('no coinciden');
+        setTimeout(() => newTurn(), 1000);
       }
-
-      setCardOne(null);
-      setCardTwo(null);
-
-      setTurns(turns + 1);
-      
     }
   },[cardOne, cardTwo])
-
+  
   const cardSelected = (card) => {
     cardOne ? setCardTwo(card) : setCardOne(card);
+  }
+  
+  const newTurn = () =>{
+    setCardOne(null);
+    setCardTwo(null);
+    setTurns(turns + 1);
+    setDisabled(false);
   }
   
   const shuffleCards = () => {
@@ -67,7 +69,7 @@ function App() {
   return <div className='app'>
     <Routes>
       <Route path='/' element={<Home setAuthorized={setAuthorized} shuffleCards={shuffleCards}/>}/>
-      <Route path='/game' element={ authorized ? <Game turns={turns} cardSelected={cardSelected} shuffleCards={shuffleCards} cards={cards}/> : <Navigate to='/'/>}/>
+      <Route path='/game' element={ authorized ? <Game turns={turns} cardSelected={cardSelected} shuffleCards={shuffleCards} cards={cards} cardOne={cardOne} cardTwo={cardTwo} disabled={disabled}/> : <Navigate to='/'/>}/>
     </Routes>
     <Footer/>
 
