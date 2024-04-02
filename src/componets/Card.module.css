@@ -1,13 +1,13 @@
 .card{
     position: relative;
-    border-radius: .5rem;
-    width: 12.5rem;
-    height: 12.5rem;
+    border-radius: .3rem;
+    width: 5rem;
+    height: 6.5rem;
     overflow: hidden;
 }
 
 .card img{
-    width: 200px;
+    width: 5.5rem;
 }
 .front{
     position: absolute;
@@ -30,4 +30,18 @@
 .flipped .back{
     transform: rotateY(-90deg);
     transition-delay: 0s;
+}
+
+
+@media (min-width: 480px){
+    .card{
+        border-radius: .5rem;
+        width: 12.5rem;
+        height: 12.5rem;
+    }
+
+    .card img{
+        width: 200px;
+    }
+
 }
