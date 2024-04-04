@@ -6,14 +6,14 @@ import Footer from './componets/Footer'
 import {Routes, Route, Navigate} from 'react-router-dom';
 
 const cardImages = [
-  {src: '/cards/biscuit.png', matched: false},
-  {src: '/cards/fly.png', matched: false},
-  {src: '/cards/glitch.png', matched: false},
-  {src: '/cards/ice.png', matched: false},
-  {src: '/cards/kid.png', matched: false},
-  {src: '/cards/hair.png', matched: false},
-  {src: '/cards/roomba.png', matched: false},
-  {src: '/cards/adobe.png', matched: false}
+  {src: './cards/biscuit.png', matched: false},
+  {src: './cards/fly.png', matched: false},
+  {src: './cards/glitch.png', matched: false},
+  {src: './cards/ice.png', matched: false},
+  {src: './cards/kid.png', matched: false},
+  {src: './cards/hair.png', matched: false},
+  {src: './cards/roomba.png', matched: false},
+  {src: './cards/adobe.png', matched: false}
 ]
 
 function App() {
