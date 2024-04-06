@@ -25,7 +25,9 @@ function Home({setAuthorized, shuffleCards }){
         
         <div className={styles.socials}>
             <img src="./socials/linkedin.svg" alt="LinkedIn Logo" width='35px' />
-            <img src="./socials/github.svg" alt="Github Logo" width='35px' />
+            <a href="https://github.com/AlvarezMar" target="_blank">
+                <img src="./socials/github.svg" alt="Github Logo" width='35px' />
+            </a>
             <img src="./socials/instagram.svg" alt="Instagram Logo" width='35px' />
         </div>
     </div>
