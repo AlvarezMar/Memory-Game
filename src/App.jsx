@@ -6,14 +6,14 @@ import Footer from './componets/Footer'
 import {Routes, Route, Navigate} from 'react-router-dom';
 
 const cardImages = [
-  {src: './cards/biscuit.png', matched: false},
-  {src: './cards/fly.png', matched: false},
-  {src: './cards/glitch.png', matched: false},
-  {src: './cards/ice.png', matched: false},
-  {src: './cards/kid.png', matched: false},
-  {src: './cards/hair.png', matched: false},
-  {src: './cards/roomba.png', matched: false},
-  {src: './cards/adobe.png', matched: false}
+  {src: './cards/biscuit.webp', matched: false},
+  {src: './cards/fly.webp', matched: false},
+  {src: './cards/glitch.webp', matched: false},
+  {src: './cards/ice.webp', matched: false},
+  {src: './cards/kid.webp', matched: false},
+  {src: './cards/hair.webp', matched: false},
+  {src: './cards/roomba.webp', matched: false},
+  {src: './cards/adobe.webp', matched: false}
 ]
 
 function App() {
@@ -65,6 +65,25 @@ function App() {
     setCards(shuffledCards);
     setTurns(0);
   }
+
+  useEffect(() => {
+    const adobe = new Image();
+    adobe.src = './cards/adobe.webp';
+    const biscuit = new Image();
+    biscuit.src = './cards/biscuit.webp';
+    const fly = new Image();
+    fly.src = './cards/fly.webp';
+    const glitch = new Image();
+    glitch.src = './cards/glitch.webp';
+    const hair = new Image();
+    hair.src = './cards/hair.webp';
+    const ice = new Image();
+    ice.src = './cards/ice.webp';
+    const kid = new Image();
+    kid.src = './cards/kid.webp';
+    const roomba = new Image();
+    roomba.src = './cards/roomba.webp';
+  }, []);
 
   return <div className='app'>
     <Routes>
